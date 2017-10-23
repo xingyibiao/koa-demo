@@ -1,0 +1,77 @@
+Arguments: 
+  D:\Program Files\nodejs\node.exe D:\Program Files (x86)\Yarn\bin\yarn.js init
+
+PATH: 
+  C:\Users\Administrator.SC-201703101421\bin;D:\Program Files\Git\mingw64\bin;D:\Program Files\Git\usr\local\bin;D:\Program Files\Git\usr\bin;D:\Program Files\Git\usr\bin;D:\Program Files\Git\mingw64\bin;D:\Program Files\Git\usr\bin;C:\Users\Administrator.SC-201703101421\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;D:\Program Files\Java\jdk1.7.0_80\bin;D:\Program Files\Java\jdk1.7.0_80\jre\bin;%CATALINA_HOME%\bin;%CATALINA_HOME%\lib;C:\Windows\System32;C:\Windows;D:\Program Files\Git\cmd;D:\Program Files\MySQL\MySQL Server 5.1\bin;D:\wamp64\bin\php\php7.0.10;D:\Program Files\nodejs;D:\Program Files (x86)\Yarn\bin;C:\Users\Administrator.SC-201703101421\AppData\Local\Programs\Python\Python35\Scripts;C:\Users\Administrator.SC-201703101421\AppData\Local\Programs\Python\Python35;D:\Program Files (x86)\Microsoft VS Code Insiders\bin;D:\wamp64\bin\php\php7.0.10;C:\Users\Administrator.SC-201703101421\AppData\Roaming\npm;C:\Users\Administrator.SC-201703101421\AppData\Local\Programs\Fiddler;C:\Users\Administrator.SC-201703101421\AppData\Local\Yarn\bin;D:\Program Files\Git\usr\bin\vendor_perl;D:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  0.27.5
+
+Node version: 
+  8.2.1
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "express",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "es6-weak-map": "^2.0.2",
+      "eslint": "^2.13.1",
+      "eslint-config-standard": "^10.2.1",
+      "eslint-plugin-import": "^2.8.0",
+      "eslint-plugin-node": "^5.2.0",
+      "eslint-plugin-promise": "^3.6.0",
+      "eslint-plugin-standard": "^3.0.1",
+      "esrecurse": "^4.2.0",
+      "generate-function": "^2.0.0",
+      "generate-object-property": "^1.2.0",
+      "is-property": "^1.0.2",
+      "jsonpointer": "^4.0.1",
+      "ms": "^2.0.0",
+      "object-assign": "^4.1.1",
+      "prelude-ls": "^1.1.2",
+      "resolve-from": "^4.0.0",
+      "type-check": "^0.3.2",
+      "xtend": "^4.0.1"
+    },
+    "dependencies": {
+      "co": "^4.6.0",
+      "fs": "^0.0.1-security",
+      "jwt-simple": "^0.5.1",
+      "koa": "^2.3.0",
+      "koa-bodyparser": "^4.2.0",
+      "koa-compose": "^4.0.0",
+      "koa-router": "^7.2.1",
+      "koa-static": "^4.0.1",
+      "path": "^0.12.7",
+      "sequelize": "^4.15.0",
+      "tedious": "^2.0.0",
+      "terraformer": "^1.0.8"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Can't answer a question unless a user TTY
+      at ConsoleReporter.question (D:\Program Files (x86)\Yarn\lib\yarn-cli.js:81327:59)
+      at Object.<anonymous> (D:\Program Files (x86)\Yarn\lib\yarn-cli.js:76832:38)
+      at Generator.next (<anonymous>)
+      at step (D:\Program Files (x86)\Yarn\lib\yarn-cli.js:91:30)
+      at D:\Program Files (x86)\Yarn\lib\yarn-cli.js:102:13
+      at <anonymous>
+      at process._tickCallback (internal/process/next_tick.js:188:7)
