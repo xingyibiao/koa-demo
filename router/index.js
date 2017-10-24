@@ -2,7 +2,7 @@
  * @Author: xingyibiao
  * @Date: 2017-10-23 14:35:22
  * @Last Modified by: xingyibiao
- * @Last Modified time: 2017-10-23 15:46:31
+ * @Last Modified time: 2017-10-24 16:59:00
  */
 
 const Router = require('koa-router')
@@ -30,5 +30,6 @@ router.get('/user/id/:id', User.getUserById)
 router.get('/user/size/:size', User.getUserBySize)
 router.post('/admin/login', MeAccounts.login)
 router.get('/products', Product.getProductsList)
+router.get('/test500', Product.test500)
 
 module.exports = router
