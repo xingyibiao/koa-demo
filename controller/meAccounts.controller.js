@@ -2,10 +2,10 @@
  * @Author: xingyibiao
  * @Date: 2017-10-20 14:19:01
  * @Last Modified by: xingyibiao
- * @Last Modified time: 2017-10-23 14:49:13
+ * @Last Modified time: 2017-10-25 14:16:28
  */
 const crypto = require('crypto')
-const jwt = require('jwt-simple')
+const Auth = require('../auth')
 const { MeAccounts } = require('../model/meAccounts.model')
 
 // login
@@ -32,7 +32,8 @@ exports.login = async (ctx) => {
         name: user.Name,
         sex: user.SEX,
       }
-      result.token = jwt.encode(payload, 'hahaha')
+      const auth = new Auth()
+      result.token = auth.encode(payload)
     } else {
       result.errno = 1
       result.errmsg = '密码错误'
@@ -40,6 +41,7 @@ exports.login = async (ctx) => {
   } catch (err) {
     result.errno = 1
     result.errmsg = '服务器错误'
+    result.data = err
   }
   ctx.body = result
 }

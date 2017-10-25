@@ -2,7 +2,7 @@
  * @Author: xingyibiao
  * @Date: 2017-10-20 16:04:15
  * @Last Modified by: xingyibiao
- * @Last Modified time: 2017-10-24 17:24:55
+ * @Last Modified time: 2017-10-25 08:48:52
  */
 const Koa = require('koa')
 const router = require('./router')
@@ -10,9 +10,12 @@ const staticServer = require('koa-static')
 const path = require('path')
 const bodyParser = require('koa-bodyparser')
 const views = require('koa-views')
+const logger = require('koa-logger')
 
 const app = new Koa()
 
+// logger
+app.use(logger())
 
 // bodyParser
 app.use(bodyParser())

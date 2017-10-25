@@ -2,7 +2,7 @@
  * @Author: xingyibiao
  * @Date: 2017-10-20 14:06:56
  * @Last Modified by: xingyibiao
- * @Last Modified time: 2017-10-23 14:39:01
+ * @Last Modified time: 2017-10-25 13:50:16
  */
 const Sequelize = require('sequelize')
 const sequelize = require('../db/sql.sqlserver')
@@ -24,4 +24,5 @@ exports.MeAccounts = sequelize.define('ME_AccountS', {
 }, {
   createdAt: false,
   updatedAt: false,
+  freezeTableName: true, // 阻止自动将表名加为复数
 })

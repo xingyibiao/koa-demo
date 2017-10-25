@@ -8,9 +8,35 @@
 </head>
 <body>
   <form action="/admin/login" method="POST">
-    <input type="text" name="userName">
-    <input type="text" name="passWord">
-    <input type="submit" value="gogogo">
+    <input type="text" name="userName" class="userName">
+    <input type="text" name="passWord" class="passWord">
+    <input type="button" value="gogogo" id="login">
   </form>
+  <script src="https://www.jsdelivr.com/package/npm/axios"></script>
+  <script>
+    const $login = document.getElementById('login')
+    function login() {
+      const userName = document.querySelector('.userName').value
+      const passWord = document.querySelector('.passWord').value
+      
+      data = {
+        userName,
+        passWord
+      }
+      // login gogogo
+      axios.post('/admin/login', data)
+        .then(res => {
+          const {data} = res
+          if (data.token) {
+            localStorage.setItem('token', data.token)
+          }
+          console.log(res)
+        })
+        .catch(err => {
+          console.log(err)
+        })
+    }
+    $login.addEventListener('click', login, false)
+  </script>
 </body>
 </html>

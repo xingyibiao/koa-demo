@@ -11,7 +11,10 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
     const content = document.querySelector('.content')
-    
+    const AUTH_TOKEN = localStorage.getItem('token')
+    if(AUTH_TOKEN) {
+      axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
+    }
     const pageInit = async() => {
       try{
         const { data } = await axios.get('/products')

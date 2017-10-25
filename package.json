@@ -23,6 +23,7 @@
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
     "koa-compose": "^4.0.0",
+    "koa-logger": "^3.1.0",
     "koa-router": "^7.2.1",
     "koa-static": "^4.0.1",
     "koa-views": "^6.1.1",
@@ -30,7 +31,8 @@
     "pug": "^2.0.0-rc.4",
     "sequelize": "^4.15.0",
     "tedious": "^2.0.0",
-    "terraformer": "^1.0.8"
+    "terraformer": "^1.0.8",
+    "lodash": "^4.17.4"
   },
   "eslintIgnore": [
     "node_modules"

@@ -2,7 +2,7 @@
  * @Author: xingyibiao
  * @Date: 2017-10-23 15:03:28
  * @Last Modified by: xingyibiao
- * @Last Modified time: 2017-10-24 17:15:26
+ * @Last Modified time: 2017-10-25 16:00:52
  */
 const { Product } = require('../model/product.model')
 
@@ -14,7 +14,7 @@ exports.getProductsList = async (ctx, next) => {
     ctx.body = data
   } catch (error) {
     ctx.status = 500
-    next()
+    await next()
   }
 }
 
