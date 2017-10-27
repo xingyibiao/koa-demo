@@ -2,7 +2,7 @@
  * @Author: xingyibiao
  * @Date: 2017-10-23 15:03:28
  * @Last Modified by: xingyibiao
- * @Last Modified time: 2017-10-25 16:00:52
+ * @Last Modified time: 2017-10-26 15:33:09
  */
 const { Product } = require('../model/product.model')
 
@@ -18,12 +18,6 @@ exports.getProductsList = async (ctx, next) => {
   }
 }
 
-exports.test500 = (ctx, next) => {
-  try {
-    ctx.status = 500
-    next()
-  } catch (err) {
-    ctx.status = 500
-    next(err)
-  }
+exports.test500 = async (ctx) => {
+  await ctx.throw(500)
 }

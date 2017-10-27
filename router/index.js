@@ -2,7 +2,7 @@
  * @Author: xingyibiao
  * @Date: 2017-10-23 14:35:22
  * @Last Modified by: xingyibiao
- * @Last Modified time: 2017-10-25 15:49:08
+ * @Last Modified time: 2017-10-26 15:12:55
  */
 
 const Router = require('koa-router')
@@ -21,6 +21,9 @@ const Product = require('../controller/product.controller')
 // token鉴权中间件
 const AuthAllow = require('../auth/authAllow.middleware')
 
+// jsonp
+const { jsonpTest } = require('../controller/jsonpTest.controller')
+
 // const auth = new AuthAllow()
 const router = new Router()
 
@@ -36,6 +39,9 @@ router.get('/user/id/:id', User.getUserById)
 router.get('/user/size/:size', User.getUserBySize)
 router.post('/admin/login', MeAccounts.login)
 router.get('/products', AuthAllow, Product.getProductsList)
+
+// test
 router.get('/test500', Product.test500)
+router.get('/jsonp', jsonpTest)
 
 module.exports = router
